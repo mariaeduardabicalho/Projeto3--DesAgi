@@ -33,6 +33,7 @@ public class ContactsActivity extends AppCompatActivity {
         buttonajudante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 openMessagesActivity(numero_ajudante);
             }
         });
@@ -40,6 +41,7 @@ public class ContactsActivity extends AppCompatActivity {
         buttonrafael.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 openMessagesActivity(numero_rafael);
             }
         });

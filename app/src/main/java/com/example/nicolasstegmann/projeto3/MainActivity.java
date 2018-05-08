@@ -22,13 +22,6 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    private void openMorseActivity() {
-        Intent intent = new Intent(this, MorseActivity.class);
-        startActivity(intent);
-
-        // Depois de abrir a ContactsActivity, não há porque manter a MainActivity aberta.
-        finish();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Se já temos permissão para enviar SMS, simplesmente abrimos a SendActivity.
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
-                    openMorseActivity();
+                    openContactsActivity();
                 }
                 // Se não temos permissão para enviar SMS, precisamos pedir essa permissão.
                 else {
