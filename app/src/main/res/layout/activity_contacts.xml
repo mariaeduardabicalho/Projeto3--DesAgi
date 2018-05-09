@@ -25,12 +25,12 @@
 
     <Button
         android:id="@+id/button_rafael"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="85dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="192dp"
-        android:background="#f4750e"
+        android:background="@drawable/buttonshape"
         android:text="@string/Rafael"
         android:textColor="#2E2E2E"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,11 +40,11 @@
 
     <Button
         android:id="@+id/button_ajudante"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="85dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="192dp"
-        android:background="#f4750e"
+        android:background="@drawable/buttonshape"
         android:text="@string/ajudante"
         android:textColor="#2E2E2E"
         app:layout_constraintStart_toStartOf="parent"
