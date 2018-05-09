@@ -15,7 +15,13 @@ public class ContactsActivity extends AppCompatActivity {
 
     private void openMessagesActivity(String numero_contato) {
         Intent intent = new Intent(this, Messages.class);
-        //intent.setData(Uri.parse(numero_contato));
+        intent.putExtra(numero, numero_contato);
+        startActivity(intent);
+        finish();
+    }
+
+    private void openMorseActivity(String numero_contato) {
+        Intent intent = new Intent(this, MorseActivity.class);
         intent.putExtra(numero, numero_contato);
         startActivity(intent);
         finish();
@@ -30,19 +36,30 @@ public class ContactsActivity extends AppCompatActivity {
         Button buttonrafael = (Button) findViewById(R.id.button_rafael);
         //Button buttonpai = (Button) findViewById(R.id.button_pai);
 
+        Intent intent = getIntent();
+        final String typeofmessage = intent.getStringExtra(MainActivity.ToNext);
+        Utils.showToast(ContactsActivity.this, typeofmessage);
+
         buttonajudante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                openMessagesActivity(numero_ajudante);
+                if (typeofmessage == "ready") {
+                    openMessagesActivity(numero_ajudante);
+                } else if (typeofmessage == "trans") {
+                    openMorseActivity(numero_ajudante);
+                }
             }
         });
 
         buttonrafael.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (typeofmessage == "ready") {
+                    openMessagesActivity(numero_rafael);
+                } else if (typeofmessage == "trans") {
+                    openMorseActivity(numero_rafael);
 
-                openMessagesActivity(numero_rafael);
+                }
             }
         });
 

@@ -12,10 +12,14 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_SEND_SMS = 0;
+    private String para_translator = "trans";
+    private String para_readymsg = "ready";
+    public static final String ToNext = "ID_TIPO_DE_MSG";
 
-    private void openContactsActivity() {
+    private void openContactsActivity(String typeofmessage) {
         // Exemplo de código para abrir uma activity.
         Intent intent = new Intent(this, ContactsActivity.class);
+        intent.putExtra(ToNext, typeofmessage);
         startActivity(intent);
 
         // Depois de abrir a ContactsActivity, não há porque manter a MainActivity aberta.
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Se já temos permissão para enviar SMS, simplesmente abrimos a SendActivity.
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
-                    openContactsActivity();
+                    openContactsActivity(para_readymsg);
                 }
                 // Se não temos permissão para enviar SMS, precisamos pedir essa permissão.
                 else {
@@ -57,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Se já temos permissão para enviar SMS, simplesmente abrimos a SendActivity.
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
-                    openContactsActivity();
+                    openContactsActivity(para_translator);
                 }
                 // Se não temos permissão para enviar SMS, precisamos pedir essa permissão.
                 else {
