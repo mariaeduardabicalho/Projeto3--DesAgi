@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Projeto3</string>
+    <string name="app_name">Morssenger</string>
     <string name="send_sms">Envie um SMS já escrito</string>
     <string name="quem_enviarSMSM">Para quem você quer enviar a mensagem?</string>
     <string name="ajudante">Ajudante</string>
