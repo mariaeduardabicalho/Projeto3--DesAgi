@@ -38,7 +38,7 @@ public class ContactsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final String typeofmessage = intent.getStringExtra(MainActivity.ToNext);
-        Utils.showToast(ContactsActivity.this, typeofmessage);
+        //Utils.showToast(ContactsActivity.this, typeofmessage);
 
         buttonajudante.setOnClickListener(new View.OnClickListener() {
             @Override
