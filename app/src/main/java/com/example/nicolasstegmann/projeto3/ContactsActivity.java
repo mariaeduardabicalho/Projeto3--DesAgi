@@ -43,9 +43,9 @@ public class ContactsActivity extends AppCompatActivity {
         buttonajudante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (typeofmessage == "ready") {
+                if (typeofmessage.equals("ready")) {
                     openMessagesActivity(numero_ajudante);
-                } else if (typeofmessage == "trans") {
+                } else if (typeofmessage.equals("trans")) {
                     openMorseActivity(numero_ajudante);
                 }
             }
@@ -54,9 +54,9 @@ public class ContactsActivity extends AppCompatActivity {
         buttonrafael.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (typeofmessage == "ready") {
+                if (typeofmessage.equals("ready")) {
                     openMessagesActivity(numero_rafael);
-                } else if (typeofmessage == "trans") {
+                } else if (typeofmessage.equals("trans")) {
                     openMorseActivity(numero_rafael);
 
                 }
@@ -70,5 +70,10 @@ public class ContactsActivity extends AppCompatActivity {
         //    }
       //  });
     }
-
+    @Override
+    public void onBackPressed(){ //Botão BACK padrão do android
+        startActivity(new Intent(this, MainActivity.class)); //O efeito ao ser pressionado do botão (no caso abre a activity)
+        finishAffinity(); //Método para matar a activity e não deixa-lá indexada na pilhagem
+        return;
+    }
 }

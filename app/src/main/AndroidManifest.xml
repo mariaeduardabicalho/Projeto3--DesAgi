@@ -34,6 +34,7 @@
         // android:name="android.support.PARENT_ACTIVITY"
         // android:value=".Messages" />
         <activity android:name=".MorseActivity"></activity>
+        <activity android:name=".Dicionario"></activity>
     </application>
 
 </manifest>

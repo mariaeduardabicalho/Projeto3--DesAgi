@@ -11,8 +11,9 @@
         android:layout_width="258dp"
         android:layout_height="133dp"
         android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/buttonshape"
+        android:elevation="24dp"
         android:text="Morse"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/TextoTraduzido"
         android:layout_width="272dp"
         android:layout_height="99dp"
         android:layout_marginEnd="8dp"
@@ -37,16 +38,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/Send_button"
-        android:layout_width="235dp"
+        android:layout_width="258dp"
         android:layout_height="69dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="102dp"
         android:text="Send"
         app:layout_constraintBottom_toTopOf="@+id/MorseTranslator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextoTraduzido" />
 
     <Button
         android:id="@+id/Dict"
@@ -64,18 +66,22 @@
         android:layout_marginBottom="28dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="14dp"
-        android:text="Erase"
+        android:text="Apagar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/MorseTranslator" />
 
     <Button
-        android:id="@+id/NextCharButton"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:id="@+id/NextChar"
+        android:layout_width="88dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="3dp"
         android:layout_marginEnd="16dp"
-        android:text="Next"
+        android:layout_marginStart="6dp"
+        android:text="Letra"
+        app:layout_constraintBottom_toTopOf="@+id/EraseButton"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="350dp" />
+        app:layout_constraintStart_toEndOf="@+id/MorseTranslator" />
 
 </android.support.constraint.ConstraintLayout>

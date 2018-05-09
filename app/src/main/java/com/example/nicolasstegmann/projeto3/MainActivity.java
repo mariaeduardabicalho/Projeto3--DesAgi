@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     public void onRequestPermissionsResult(int request, String[] permissions, int[] results) {
         // Se o pedido de permissão foi para enviar SMS...
